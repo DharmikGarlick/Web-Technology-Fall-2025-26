@@ -2,11 +2,34 @@
 <html>
     <head>
         <style>
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input[type="text"]{
+                width: 200px;
+            }
+
             .container{
                 max-width: 300px;
                 margin: auto;
                 border-radius: 10px;
                 background-color: darkgray;
+                padding-bottom: 30px;
+            }
+            
+            .textbox-label{
+                color: white;
+                font-size: large;
+            }
+
+            .buttons{
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                gap: 20px;
+                padding: 10px;
             }
         </style>
     </head>
@@ -16,9 +39,24 @@
             <form>
                 <table>
                     <tr>
-                        <td>Username</td>
+                        <td class="textbox-label" style="padding-top: 20px;">Username</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label" style="padding-top: 10px;">Password</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 10px;">Don't have any account? <a href="Lab Task W3 - Home Page.html">SignUp</a></td>
                     </tr>
                 </table>
+                <div class="buttons">
+                    <input type="button" value="Submit">
+                </div>
             </form>
         </div>
     </body>
