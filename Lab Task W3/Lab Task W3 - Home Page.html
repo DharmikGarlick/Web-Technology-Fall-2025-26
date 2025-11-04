@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input[type="text"]{
+                width: 200px;
+            }
+
+            .container{
+                max-width: 300px;
+                margin: auto;
+                border-radius: 10px;
+                background-color: darkgray;
+            }
+
+            .textbox-label{
+                color: white;
+                font-weight: bold;
+                padding: 5px;
+            }
+
+            .buttons{
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                gap: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center;">User Registration Form</h2>
+        <div class="container">
+            <form>
+                <table>
+                    <tr>
+                        <td class="textbox-label">Full Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <td class="textbox-label">Email</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label">Username</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label">Password</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label">Role</td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label" style="font-size: small;">
+                            Admin<input type="radio">
+                            User<input type="radio">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label">Alread have an account? <a href="Lab Task 2 - Sign In.html">Sign In</a></td>
+                    </tr>
+                </table>
+                <div class="buttons">
+                    <input type="button" value="Submit" style="border-radius: 15px;">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
