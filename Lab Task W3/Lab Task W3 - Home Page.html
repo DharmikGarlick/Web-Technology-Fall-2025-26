@@ -8,7 +8,8 @@
             }
 
             input[type="text"]{
-                width: 200px;
+                width: 250px;
+                height: 20px;
             }
 
             .container{
@@ -16,8 +17,7 @@
                 margin: auto;
                 border-radius: 10px;
                 background-color: darkgray;
-                padding-bottom: 30px;
-                padding-right: 15px;
+                padding: 0 15px 30px 15px;
             }
 
             .textbox-label{
@@ -30,6 +30,7 @@
                 align-items: center;
                 justify-content: right;
                 gap: 20px;
+                padding: 10px;
             }
         </style>
     </head>
@@ -39,37 +40,36 @@
             <form>
                 <table>
                     <tr>
-                        <td class="textbox-label">Full Name</td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                    </tr>
-                    <br><br>
-                    <tr>
-                        <td class="textbox-label">Email</td>
+                        <td class="textbox-label" style="padding-top: 20px">Full Name</td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td class="textbox-label">Username</td>
+                        <td class="textbox-label" style="padding-top: 10px;">Email</td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td class="textbox-label">Password</td>
+                        <td class="textbox-label" style="padding-top: 10px;">Username</td>
                     </tr>
                     <tr>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td class="textbox-label">Role</td>
+                        <td class="textbox-label" style="padding-top: 10px;">Password</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="textbox-label" style="padding-top: 10px;">Role</td>
                     </tr>
                     <tr>
                         <td class="textbox-label" style="font-size: small;">
-                            Admin<input type="radio">
-                            User<input type="radio">
+                            Admin <input type="radio">
+                            User <input type="radio">
                         </td>
                     </tr>
                     <tr>
