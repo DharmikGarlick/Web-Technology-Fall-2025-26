@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .container {
+            width: 500px;
+            margin: auto;
+            background-color: lightgray;
+            border-radius: 15px;
+            padding-left: 50px;;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .row label {
+            width: 170px;
+            font-weight: bold;
+        }
+
+        button {
+            align-items: center;
+            border-radius: 15px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <div class="container">
+            <form>
+                <div class="row">   
+                    <label>Full Name:<span style="color: red;">*</span></label>
+                    <input id="name" type="text" maxlength="100">
+                </div>
+                <div class="row">
+                    <label>Profession Email:<span style="color: red;">*</span></label>
+                    <input id="email" type="text">
+                </div>
+                <div class="row">
+                    <label>Company/Institution:</label>
+                    <input id="company" type="text">
+                </div>
+                <div class="row">
+                    <label>Attendance Type:<span style="color: red;">*</span></label>
+                    <input type="radio" id="attendance1">In-Person
+                    <input type="radio" id="attendance2">Virtual
+                </div>
+                <br><br>
+                <button id="register">Register</button>
+                <br><br>
+                <button id="analytics">Show Event Analytics</button>
+            </form>
+        </div>
+        <script>
+            let name, nameAlert, company, companyAlert, email, emailAlert, a1, a2, attendanceAlert, registration_counter = 0;
+
+            attendance1.onclick = function() {
+                    a2.checked = false;
+                };
+
+                attendance2.onclick = function() {
+                    a1.checked = false;
+                };
+            
+            
+            register.onclick = function() {
+                validateForm();
+            };
+
+            function validateForm() {
+                name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                company = document.getElementById("company").value;
+                attendance1 = document.getElementById("attendance1").checked;
+                attendance2 = document.getElementById("attendance2").checked;
+
+                if(name.length < 6 || name.length > 100) {
+                    nameAlert = true;
+                    alert("Name must be between 6 and 100 characters long");
+                }
+
+                if(email === "" || !email.includes("@") || !email.includes(".")) {
+                    emailAlert = true;
+                    alert("Please enter a valid email address");
+                }
+
+                if(a1.checked == false && a2.checked == false) {
+                    attendanceAlert = true;
+                    alert("Please select an attendance type");
+                }
+
+                if(nameAlert == false && emailAlert == false && attendanceAlert == false) {
+                    registration_counter += 1;
+                    alert("Registration Successful!");
+                    alert("Total Registrations: " + registration_counter);
+                }
+            }
+        </script>
+    </body>
+</html>
